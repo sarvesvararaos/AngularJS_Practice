@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">  <!--"ng-app" Keyword is used to denote that this applicatoon should be considered as as angularJs application-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HelloWorld</title>
+  
+    <script src="angular.min.js"></script>  <!--Angular Script File-->
+</head>
+<body>
+    <!--ng-controller started-->
+    <div ng-controller="HelloWorldCtrl">  <!--ng-controller="HelloWorldController" is what is used to hold the business logic-->
+        <h1 style="text-align: center;">{{message}}</h1>   <!--{{}message}-It will display the logic-->
+    </div>
+    <!--ng-controller ended-->
+
+    <!--Angular Script Started-->
+    <script type="text/javascript">
+        angular.module('myApp',[]).controller('HelloWorldCtrl',function($scope)//we are creating a "function" which will be called when our code calls this controller.The $scope object is a special object in angular which is a global object used with in angular js.The $sope is used to manage the data between the controller and the view
+        {
+            $scope.message = "Hello World This is my first AngularJS Application"
+        })
+    </script>
+    <!--Angular Script Ended-->
+</body>
+
+</html>
